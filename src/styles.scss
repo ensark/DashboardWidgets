@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+button:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}

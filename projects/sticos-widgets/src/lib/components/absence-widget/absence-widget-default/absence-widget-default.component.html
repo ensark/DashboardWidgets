@@ -1,0 +1,28 @@
+<div swAbsence [chart]="chart">
+<dx-chart id="chart" #chart
+    id="chart"
+    [dataSource]="absence.values"
+    palette="soft">
+<dxo-legend [visible]="false">
+</dxo-legend>
+    <dxo-common-series-settings 
+        argumentField="name"
+        valueField="value"
+        [ignoreEmptyPoints]="true">
+    </dxo-common-series-settings>
+    <dxo-series-template nameField="name" [customizeSeries]="customizeSeries">
+    </dxo-series-template> 
+    <dxo-tooltip 
+    [enabled]="true"
+    [customizeTooltip]="customizeTooltip">
+    </dxo-tooltip>
+</dx-chart>
+</div> 
+<div class="container-fluid">
+        <div class="row">
+          <div class="col" *ngFor="let item of absence.values">
+                <div class="chart-amount">{{ item.value }}</div>
+                <div class="chart-absence">{{ item.name | enumReader:'AbsenceType' }}</div>
+        </div>
+      </div>
+</div> 

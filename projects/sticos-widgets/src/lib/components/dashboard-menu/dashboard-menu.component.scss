@@ -1,0 +1,93 @@
+// .toolbar {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   bottom: 0;
+//   width: 310px;
+//   z-index: 1100;
+//   background-color: var(--white);
+//   padding: 10px;
+//   overflow-y: auto;
+// }
+
+// .widgets {
+//   display: flex;
+//   -ms-flex-direction: column;
+//   -webkit-flex-direction: column;
+//   flex-direction: column;
+//   margin-bottom: 20px;
+//   flex: 1 1 auto;
+//   padding: 3px;
+//   min-height: max-content;
+// }
+
+// .gridster-prototype {
+//   background-color: white;
+//   padding: 10px;
+//   position: relative;
+//   -webkit-transition: background 3s;
+//   transition: background 3s;
+//   border-radius: 3px;
+//   -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+//   -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+//   box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+// }
+
+// .gridster-prototype + .gridster-prototype {
+//   margin-top: 10px;
+// }
+
+
+// .gridster-prototype.is-over {
+//   z-index: 99999;
+// }
+
+.flex-scroll {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+  min-width: max-content;
+
+  .gridster-prototype {
+    flex: 0 0 auto;
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+}
+
+.sc-wrapper {
+  flex: 1 1 auto;
+  overflow: hidden;
+}
+
+:host {
+  width: 100%;
+  display: none;
+  flex-direction: column;
+
+  &.show {
+    display: flex;
+  }
+}
+
+.chooser {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  flex: 0 0 auto;
+}
+
+button {
+  flex: 0 0 auto;
+  outline: none;
+
+  i {
+    font-size: 2em;
+    visibility: hidden;
+  }
+}
+
+.warning {
+  flex: 0 0 auto;
+  text-align: right;
+}

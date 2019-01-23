@@ -1,0 +1,26 @@
+<sw-widget>
+  <sw-widget-header [title]="sticosWidgetOptions.headerName">
+    <div dropdown>
+      <li role="menuitem">
+        <a class="dropdown-item" (click)="onDeleteWidget()">
+          <i class="fal fa-trash-alt"></i> Remove
+        </a>
+      </li>
+    </div>
+  </sw-widget-header>
+  <sw-widget-body>
+    <div class="h-100">
+      <div [ngSwitch]="mod" class="h-100 presence-wrapper">
+        <sw-presence-widget-default [settings]="settings" *ngSwitchCase="'default'">
+          <ng-content *ngTemplateOutlet="loadingTemplate"></ng-content>
+        </sw-presence-widget-default>
+      </div>
+    </div>
+
+  </sw-widget-body>
+  <sw-widget-footer>
+    <div class="text-right">
+      <h5 class="footer-myShowMore">Show more</h5>
+    </div>
+  </sw-widget-footer>
+</sw-widget>

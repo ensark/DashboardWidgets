@@ -1,0 +1,28 @@
+::ng-deep #grid-container td {
+   height: 30px;
+}
+
+::ng-deep #grid-container .dx-datagrid-headers tr:first-child {
+   background-color: #003b5c;
+   color: white;
+   font-weight: 640;
+}
+
+::ng-deep #grid-container .dx-datagrid-headers .dx-datagrid-content {
+   border-radius: 5px;
+}
+
+
+.content-height,
+.anomaly-content,
+::ng-deep #grid-container {
+  height: 100%;
+}
+
+.grid-status {
+  color: var(--success);
+}
+
+.responsible-user {
+  cursor: pointer;
+}

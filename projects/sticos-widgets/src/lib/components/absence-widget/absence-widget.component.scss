@@ -1,0 +1,31 @@
+.new-button {
+    width: 100px
+}
+
+.header-years-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+   }
+
+.years-items {
+    margin-left: 25px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 1.5;
+    color: #003b5c ; 
+    }
+   
+.years-items:hover, .active {
+    border-bottom: 4px solid rgb(249, 189, 64);
+    font-weight: 800;
+   }
+
+.statistic-link {
+    cursor: pointer;
+    font-size: 18px;
+    color: #003b5c ;
+}
+ 

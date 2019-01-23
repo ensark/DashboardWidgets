@@ -1,0 +1,35 @@
+<div class="container-fluid d-flex flex-column h-100 no-scroll">
+  <div class="row align-items-center">
+    <div class="col">
+      <h1>{{title}}</h1>
+    </div>
+    <div class="col-auto">
+      <button class="btn btn-default" (click)="editMode = true;" *ngIf="!editMode">
+        <i class="fal fa-cog"></i>
+      </button>
+      <button class="btn btn-default mr-2" (click)="cancel()" *ngIf="editMode">
+        Cancel
+      </button>
+      <button class="btn btn-primary" (click)="saveData()" *ngIf="editMode">
+        Save
+      </button>
+    </div>
+  </div>
+  <div class="row h-100">
+    <div class="card card-page w-100 h-100 p-2 d-flex flex-column" [class.no-widgets]="noWidgets">
+      <sw-dashboard-menu [opened]="editMode" (drop)="drop($event)"></sw-dashboard-menu>
+      <h3 *ngIf="noWidgets" class="no-widgets-text">No widgets selected!</h3>
+      <perfect-scrollbar>
+        <ngx-gridster [options]="options" [draggableOptions]="draggableOptions" class="max-gridster">
+          <ngx-gridster-item *ngFor="let w of widgetData" class="widget" [options]="w.options" dragAndDrop=true resizable=true [(x)]="w.x"
+            [(y)]="w.y" [(xSm)]="w.xSm" [(ySm)]="w.ySm" [(xMd)]="w.xMd" [(yMd)]="w.yMd" [(xLg)]="w.xLg" [(yLg)]="w.yLg" [(xXl)]="w.xXl"
+            [(yXl)]="w.yXl" [(w)]="w.w" [(h)]="w.h" [(wSm)]="w.wSm" [(hSm)]="w.hSm" [(wMd)]="w.wMd" [(hMd)]="w.hMd" [(wLg)]="w.wLg"
+            [(hLg)]="w.hLg" [(wXl)]="w.wXl" [(hXl)]="w.hXl">
+            <div swWidget [widgetName]="w.widgetName" [widgetId]="w.widgetId" [settings]="w.settings" [loadingTemplate]="loadingTemplate">
+            </div>
+          </ngx-gridster-item>
+        </ngx-gridster>
+      </perfect-scrollbar>
+    </div>
+  </div>
+</div>

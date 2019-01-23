@@ -1,0 +1,14 @@
+{
+  "$schema": "../../../../../node_modules/ng-swagger-gen/ng-swagger-gen-schema.json",
+  "swagger": "./projects/sticos-widgets/src/apis/common/swagger.json",
+  "output": "./projects/sticos-widgets/src/apis/common/generated",
+  "ignoreUnusedModels": true,
+  "minParamsForContainer": 2,
+  "defaultTag": "Common",
+  "removeStaleFiles": true,
+  "modelIndex": true,
+  "serviceIndex": true,
+  "apiModule": true,
+  "enumModule": true,
+  "generateExamples": false
+}

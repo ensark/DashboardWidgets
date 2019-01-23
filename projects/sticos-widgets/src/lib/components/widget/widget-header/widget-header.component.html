@@ -1,0 +1,28 @@
+<div class="row align-items-center my-2 mx-2">
+
+  <div class="col-auto p-0">
+    <ng-content select='[icon]'></ng-content>
+  </div>
+  <div class="col p-0 header-title">
+    <h4>{{title}}</h4>
+  </div>
+  <div class="col-auto p-0">
+    <ng-content select='[buttons]'></ng-content>
+  </div>
+  <div class="col-auto p-0">
+    <div dropdown placement="bottom" class="d-inline-block" container="body">
+      <button id="button-container" dropdownToggle type="button" class="btn btn-default btn-no-borders mr-2" aria-controls="dropdown-container">
+        <i id="button-container" class="fal fa-cog fa-lg"></i>
+      </button>
+      <ul id="dropdown-container" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-container">
+        <ng-content select='[dropdown]'></ng-content>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="col-auto p-0 employee-search">
+  <ng-content select='[search]'></ng-content>
+</div>
+<div class="col-auto p-0 additional-header-content">
+<ng-content select='[additional-header-content]'></ng-content>
+</div>

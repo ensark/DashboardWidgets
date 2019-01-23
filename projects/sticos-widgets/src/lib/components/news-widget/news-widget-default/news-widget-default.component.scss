@@ -1,0 +1,38 @@
+.list-container {
+  height: 100%;
+  position: relative;
+}
+
+::ng-deep .dx-item {
+  border-top: none;
+}
+
+.col {
+  max-width: 75%;
+  padding: 0;
+}
+
+::ng-deep .news-img {
+  height: 100%;
+  width: auto;
+  padding-right: 0;
+}
+
+::ng-deep .news-content {
+  vertical-align: top;
+  white-space: normal;
+
+  p {
+    margin-bottom: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 40px;
+    line-height: 20px;
+    font-size: 15px;
+  }
+}
+
+::ng-deep .news-date {
+  font-weight: 200;
+  font-size: 12px;
+}

@@ -1,0 +1,64 @@
+::ng-deep .position-highlight .inner {
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  left: 5px;
+  right: 5px;
+  background-color: #768294;
+  border: 1px solid transparent;
+  -webkit-transition: background 3s;
+  transition: background 3s;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  z-index: 99;
+}
+
+::ng-deep .gridster-item-inner {
+  position: absolute;
+  background: #fff;
+  border: 1px solid transparent;
+  top: 5px;
+  bottom: 5px;
+  left: 5px;
+  right: 5px;
+  -webkit-transition: background 3s;
+  transition: background 3s;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.no-widgets {
+  position: relative;
+  ::ng-deep .ps-content,
+  .max-gridster {
+    height: 100%;
+  }
+}
+
+.no-widgets-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.max-gridster {
+  min-height: max-content;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.scroll {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+::ng-deep .ps--active-y .ps-content {
+  padding-right: 15px;
+}
+
+::ng-deep .ps > .ps__rail-y {
+  opacity: 0.6;
+}

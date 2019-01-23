@@ -1,0 +1,34 @@
+<div class="content-height" *ngIf="settings; else loading">
+  <div class="d-flex justify-content-center">
+    <div class="rss-feed-container">
+      <div class="d-flex justify-content-center" *ngFor="let s of settings.item">
+        <div class="container feed-container">
+          <div class="row">
+            <div class="col-md-1 feed-image" *ngIf="s.enclosure; else noImage">
+              <img src="{{s.enclosure[0].$.url}}">
+            </div>
+            <ng-template #noImage>
+              <div class="col-md-1 feed-image">
+              </div>
+            </ng-template>
+            <div class="col-md feed-text">
+              <h5>
+                <a href="{{s.link[0]}}" target="_blank">{{s.title}}</a>
+              </h5>
+              <span class="feed-description">{{s.description | clearHtmlTags | substringOfText: 50}}</span>
+              <span>{{s.author}}</span>
+              <span class="feed-date">{{s.pubDate | date:'fullDate'}}</span>
+            </div>
+          </div>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #loading>
+  <div class="content-height">
+    <ng-content></ng-content>
+  </div>
+</ng-template>

@@ -1,0 +1,45 @@
+<sw-widget>
+  <sw-widget-header [title]="title">
+    <div icon>
+      <i class="fal fa-rss-square fa-2x rss-icon"></i>
+    </div>
+    <div dropdown>
+      <li role="menuitem">
+        <a class="dropdown-item" (click)="onDeleteWidget()">
+          <i class="fal fa-trash-alt"></i> Remove
+        </a>
+      </li>
+      <li role="menuitem">
+        <a class="dropdown-item" (click)="onShowSettings()">
+          <i class="fal fa-cog"></i> Settings
+        </a>
+      </li>
+    </div>
+  </sw-widget-header>
+  <sw-widget-body>
+    <div *ngIf="settings && !settings.settingsSkip; else noSettings" class="h-100">
+      <div [ngSwitch]="mod" class="h-100">
+        <sw-rss-reader-widget-default [settings]="items" *ngSwitchCase="'default'">
+          <ng-content *ngTemplateOutlet="loadingTemplate"></ng-content>
+        </sw-rss-reader-widget-default>
+      </div>
+    </div>
+    <ng-template #noSettings>
+      <div class="d-flex flex-column h-100 justify-content-center align-items-center">
+        <h5 class="text-center">Please set your settings.</h5>
+      </div>
+    </ng-template>
+  </sw-widget-body>
+</sw-widget>
+<dx-popup title="Rss reader settings" maxWidth="400px" height="auto" [(visible)]="popupVisible" (onHidden)="saveSettings()">
+  <div *dxTemplate="let data of 'content'">
+    <div class="form-group">
+      <label for="feed-url">Feed url:</label>
+      <input id="feed-url" type="text" class="form-control" [(ngModel)]="model" placeholder="Type your rss-feed link" />
+    </div>
+    <hr>
+    <div class="btn-toolbar">
+      <button class="btn btn-primary" (click)="popupVisible = false" [disabled]="!(settingsProxy && settingsProxy.url)">Save</button>
+    </div>
+  </div>
+</dx-popup>

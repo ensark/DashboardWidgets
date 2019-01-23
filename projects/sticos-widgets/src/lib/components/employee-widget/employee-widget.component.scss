@@ -1,0 +1,22 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.search input { text-indent: 30px;}
+
+.search-icon {
+  position: absolute;
+  left: 14px;
+  top: 24%;
+  cursor: pointer;
+  margin-top: 3px;
+}
+
+.employee-content {
+  overflow: hidden;
+}
+
+

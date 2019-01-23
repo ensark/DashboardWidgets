@@ -1,0 +1,32 @@
+<div class="content-height" [ngClass]="{'ps__child--consume': shouldScroll}" (mouseenter)="shouldScroll = true">
+  <input type="text" class="form-control mb-3" [(ngModel)]="searchTerm" placeholder="Search for employee">
+  <div class="list-container">
+    <dx-list [dataSource]="dataSource" pageLoadMode="scrollBottom" showScrollbar="always" height="100%" (onScroll)="scroll($event)">
+      <div *dxTemplate="let e of 'item'">
+        <div class="d-flex flex-row flex-nowrap align-items-center employee-card">
+          <div class="col-auto p-0">
+            <img src="{{e.image}}" class="employee-image p-2" />
+          </div>
+          <div class="col d-flex flex-column flex-sm-row h-100 align-items-center">
+            <div class="col no-shrink d-flex flex-column my-1">
+              <p class="mb-1">
+                <a>{{e.name}}</a>
+              </p>
+              <p class="text-secondary mb-0">{{e.position}}</p>
+            </div>
+            <div class="col no-shrink my-1">
+              <p class="mb-0 text-center-md">
+                <a>{{e.phone}}</a>
+              </p>
+            </div>
+            <div class="col no-shrink my-1">
+              <p class="mb-0 text-center-md">
+                <a>{{e.email}}</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </dx-list>
+  </div>
+</div>

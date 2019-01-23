@@ -1,0 +1,37 @@
+<sw-widget>
+  <sw-widget-header [title]="sticosWidgetOptions.headerName">
+    <div dropdown>
+      <li role="menuitem">
+        <a class="dropdown-item" (click)="onDeleteWidget()">
+          <i class="fal fa-trash-alt"></i> Remove
+        </a>
+      </li>
+      <li role="menuitem">
+        <a class="dropdown-item" (click)="onShowSettings()">
+          <i class="fal fa-cog"></i> Settings
+        </a>
+      </li>
+    </div>
+  </sw-widget-header>
+  <sw-widget-body class="no-overflow">
+    <div [ngSwitch]="mod" *ngIf="user" class="h-100">
+      <sw-user-widget-default *ngSwitchCase="'default'" [settings]="settings" [user]="user"></sw-user-widget-default>
+    </div>
+  </sw-widget-body>
+  <sw-widget-footer>
+  </sw-widget-footer>
+</sw-widget>
+
+<dx-popup class="popup" [width]="300" [height]="250" [showTitle]="true" title="Chose user" [dragEnabled]="false" [closeOnOutsideClick]="true"
+  [(visible)]="popupVisible">
+  <div *dxTemplate="let data of 'content'">
+    <form [formGroup]="userForm" class="user-form">
+      <select formControlName="id" class="form-control">
+        <option *ngFor="let u of allUsers" [value]="u.id">{{u.firstName}} {{u.lastName}}</option>
+      </select>
+      <div class="btn-toolbar">
+        <button type="submit" class="btn btn-primary" (click)="onSettingsSaved()">Save</button>
+      </div>
+    </form>
+  </div>
+</dx-popup>

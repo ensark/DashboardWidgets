@@ -1,0 +1,25 @@
+<sw-widget>
+  <sw-widget-header [title]="sticosWidgetOptions.headerName">
+    <div dropdown>
+      <li role="menuitem">
+        <a class="dropdown-item" (click)="onDeleteWidget()">
+          <i class="fal fa-trash-alt"></i> Remove
+        </a>
+      </li>
+    </div>
+  </sw-widget-header>
+  <sw-widget-body>
+    <div *ngIf="settings; else noSettings" class="h-100">
+      <div [ngSwitch]="mod" class="h-100">
+        <sw-comic-widget-default [settings]="settings" *ngSwitchCase="'default'">
+          <ng-content *ngTemplateOutlet="loadingTemplate"></ng-content>
+        </sw-comic-widget-default>
+      </div>
+    </div>
+    <ng-template #noSettings>
+      <div class="d-flex flex-column h-100 justify-content-center align-items-center">
+        <h5 class="text-center">Please set your settings.</h5>
+      </div>
+    </ng-template>
+  </sw-widget-body>
+</sw-widget>

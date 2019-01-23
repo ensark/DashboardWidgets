@@ -1,0 +1,30 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.footer-mydeviations {
+  color: var(--primary);
+  cursor: pointer;
+  float: left;
+  margin-left: 8px;
+}
+
+.body-content {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.anomaly-header-button {
+  margin-right: 5px;
+}
+
+.required-field {
+  color:var(--danger);
+}
+
+.anomaly-header-button {
+  width: 80px;
+}

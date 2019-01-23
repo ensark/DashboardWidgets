@@ -1,0 +1,57 @@
+:host {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.settings {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+#profile-image {
+  width: 35%;
+  height: 50%;
+  float: left;
+  border-radius: 50%;
+  border: 2px solid gray;
+  margin: 7% 2%;
+  max-width: 150px;
+  max-height: 150px;
+}
+
+#profile-info {
+  width: 50%;
+  height: 40%;
+  float: right;
+  margin-top: 10%;
+  margin-right: 10%;
+  color: #a5a5a5;
+}
+
+#user-name {
+  line-height: 0%;
+  color: #003b5c;
+;
+}
+
+#user-address {
+  margin: 10% 0 12% 0;
+  font-style: italic;
+}
+
+.info {
+  display: block;
+}
+
+.info span {
+  margin-right: 5%;
+  color: rgb(112,112,112);
+}

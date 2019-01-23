@@ -1,0 +1,16 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.sticos-dx-vertical {
+  .dx-field-label,
+  .dx-field-value {
+    display: block;
+    width: 100%;
+    float: none;
+  }
+}
+

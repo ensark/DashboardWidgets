@@ -1,0 +1,41 @@
+<div
+  class="list-container"
+  [ngClass]="{ 'ps__child--consume': shouldScroll }"
+  (mouseenter)="shouldScroll = true"
+>
+  <dx-list
+    height="100%"
+    [dataSource]="dataSource"
+    pageLoadMode="scrollBottom"
+    showScrollbar="always"
+    (onScroll)="scroll($event)"
+  >
+    <div *dxTemplate="let news of 'item'">
+      <div class="row">
+        <div class="col-auto">
+          <div class="news-img">
+            <sc-image
+              cssClass="card-img-top shadow-sm"
+              [id]="news.imageId"
+              [title]="news.title"
+              [type]="'News'"
+              width="100%"
+              height="80px"
+              [options]="{ width: 80, height: 80, imageResizeMode: 'Fill' }"
+              [imageSource]="'Personal'"
+            ></sc-image>
+          </div>
+        </div>
+        <div class="col">
+          <div class="news-content">
+            <h6>{{ news.title }}</h6>
+            <p>{{ news.text | striphtml }}</p>
+            <span class="news-date">{{
+              news.fromDate | date: 'mediumDate'
+            }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dx-list>
+</div>

@@ -1,0 +1,68 @@
+sw-widget-body {
+  overflow-y: hidden;
+}
+
+.footer-myShowMore {
+  color: #003b5c;
+  cursor: pointer;
+}
+
+.default-color {
+  color: rgb(0, 59, 92);
+}
+
+.vacation-bank-content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vacation-bank-content {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.header-years-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.years-items {
+margin-left: 25px;
+cursor: pointer;
+font-weight: 600;
+font-size: 25px;
+}
+
+ .years-items:hover, .active {
+  border-bottom: 4px solid rgb(249, 189, 64);
+}
+
+.footer-type-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.type-items {
+  padding-left: 35px;
+}
+
+.type-items:first-child {
+  padding-left: 0;
+}
+
+.type-items-value {
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 36px;
+}
+
+.vacation-header-button {
+  width: 80px;
+  margin-right: 10px;
+}

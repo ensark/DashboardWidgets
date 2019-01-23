@@ -1,0 +1,78 @@
+<sw-widget>
+  <sw-widget-header [title]="sticosWidgetOptions.headerName">
+    <div dropdown>
+      <li role="menuitem">
+        <a class="dropdown-item" (click)="onDeleteWidget()">
+          <i class="fal fa-trash-alt"></i> Remove
+        </a>
+      </li>
+      <li role="menuitem">
+        <a class="dropdown-item" (click)="onShowSettings()">
+          <i class="fal fa-cog"></i> Settings
+        </a>
+      </li>
+      <li role="menuitem">
+        <a class="dropdown-item" (click)="sync()" [class.disabled]="!settings">
+          <i class="fal fa-sync"></i> Sync
+        </a>
+      </li>
+    </div>
+  </sw-widget-header>
+  <sw-widget-body>
+    <div *ngIf="settings && !settings.settingsSkip; else noSettings" class="h-100">
+      <div [ngSwitch]="mod" class="h-100">
+        <sw-weather-widget-default [settings]="settings" *ngSwitchCase="'default'">
+          <ng-content *ngTemplateOutlet="loadingTemplate"></ng-content>
+        </sw-weather-widget-default>
+      </div>
+    </div>
+    <ng-template #noSettings>
+      <div class="d-flex flex-column h-100 justify-content-center align-items-center">
+        <h5 class="text-center">Please set your settings.</h5>
+      </div>
+    </ng-template>
+  </sw-widget-body>
+  <sw-widget-footer>
+    <div class="text-right">
+      <small>Last sync: {{lastSync}}</small>
+    </div>
+  </sw-widget-footer>
+</sw-widget>
+
+<dx-popup title="Weather settings" maxWidth="400px" height="auto" [(visible)]="popupVisible" (onHidden)="saveSettings()">
+  <div *dxTemplate="let data of 'content'">
+    <div class="form-group">
+      <ng-template #rt let-r="result" let-t="term">
+        <span>{{ r.formatted_address}}</span>
+      </ng-template>
+      <!-- <label for="typeahead-basic">Search for a city:</label>
+      <input id="typeahead-basic" type="text" class="form-control" [(ngModel)]="model" [ngbTypeahead]="search" [resultTemplate]="rt"
+        [resultFormatter]="formatter" [inputFormatter]="formatter" placeholder="Type your city" /> -->
+      <div class="dx-field sticos-dx-vertical">
+        <div class="dx-field-label">Search for a city:</div>
+        <div class="dx-field-value">
+          <dx-autocomplete placeholder="Type your city..." [dataSource]="dataSource" [searchTimeout]="500" (onValueChanged)="updateSettings($event)"
+            [value]="formattedAddress">
+            <div *dxTemplate="let item of 'item'">
+              <span>{{formatter(item)}}</span>
+            </div>
+          </dx-autocomplete>
+          <div *ngIf="warning">
+            {{warning}}
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="form-group">
+      <label>Currently selected:</label>
+      <br/>
+      <h5 *ngIf="settingsProxy && settingsProxy.name">{{settingsProxy.name}}</h5>
+      <h5 *ngIf="!(settingsProxy && settingsProxy.name)">No city selected. Please choose a city.</h5>
+    </div>
+    <hr>
+    <div class="btn-toolbar">
+      <button type="submit" class="btn btn-primary" (click)="popupVisible = false" [disabled]="!(settingsProxy && settingsProxy.name)">Save</button>
+    </div>
+  </div>
+</dx-popup>

@@ -1,0 +1,1085 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>sticos-widgets-source documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/vagrant.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">sticos-widgets-source documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>UserWidgetComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>projects/sticos-widgets/src/lib/components/user-widget/user-widget.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">providers</td>
+                <td class="col-md-9">
+                            <code>UserService</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>sw-user-widget</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./user-widget.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./user-widget.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#allUsers">allUsers</a>
+                            </li>
+                            <li>
+                                <a href="#claimsUser">claimsUser</a>
+                            </li>
+                            <li>
+                                <a href="#popupVisible">popupVisible</a>
+                            </li>
+                            <li>
+                                <a href="#settingsProxy">settingsProxy</a>
+                            </li>
+                            <li>
+                                <a href="#sticosWidgetOptions">sticosWidgetOptions</a>
+                            </li>
+                            <li>
+                                <a href="#user">user</a>
+                            </li>
+                            <li>
+                                <a href="#userForm">userForm</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onDeleteWidget">onDeleteWidget</a>
+                            </li>
+                            <li>
+                                <a href="#onSettingsSaved">onSettingsSaved</a>
+                            </li>
+                            <li>
+                                <a href="#onShowSettings">onShowSettings</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#loadingTemplate">loadingTemplate</a>
+                            </li>
+                            <li>
+                                <a href="#mod">mod</a>
+                            </li>
+                            <li>
+                                <a href="#settings">settings</a>
+                            </li>
+                            <li>
+                                <a href="#widgetId">widgetId</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(userCacheService: <a href="../injectables/UserCacheService.html">UserCacheService</a>, fb: <a href="https://angular.io/api/forms/FormBuilder" target="_blank">FormBuilder</a>, userService: UserService, widgetService: <a href="../injectables/WidgetService.html">WidgetService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">projects/sticos-widgets/src/lib/components/user-widget/user-widget.component.ts:45</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>userCacheService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/UserCacheService.html" target="_self" >UserCacheService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>fb</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/forms/FormBuilder" target="_blank" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>userService</td>
+                                                  
+                                                        <td>
+                                                                    <code>UserService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>widgetService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/WidgetService.html" target="_self" >WidgetService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="loadingTemplate"></a>
+                        <code>loadingTemplate</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code>TemplateRef&lt;any&gt;</code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">projects/sticos-widgets/src/lib/components/user-widget/user-widget.component.ts:35</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="mod"></a>
+                        <code>mod</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">projects/sticos-widgets/src/lib/components/user-widget/user-widget.component.ts:29</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="settings"></a>
+                        <code>settings</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code>IUser</code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">projects/sticos-widgets/src/lib/components/user-widget/user-widget.component.ts:31</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="widgetId"></a>
+                        <code>widgetId</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">projects/sticos-widgets/src/lib/components/user-widget/user-widget.component.ts:33</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnInit"></a>
+                        <span class="name">
+                            <b>
+                            ngOnInit
+                            </b>
+                            <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ngOnInit()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">projects/sticos-widgets/src/lib/components/user-widget/user-widget.component.ts:58</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onDeleteWidget"></a>
+                        <span class="name">
+                            <b>
+                            onDeleteWidget
+                            </b>
+                            <a href="#onDeleteWidget"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>onDeleteWidget()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="96" class="link-to-prism">projects/sticos-widgets/src/lib/components/user-widget/user-widget.component.ts:96</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onSettingsSaved"></a>
+                        <span class="name">
+                            <b>
+                            onSettingsSaved
+                            </b>
+                            <a href="#onSettingsSaved"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>onSettingsSaved()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="86" class="link-to-prism">projects/sticos-widgets/src/lib/components/user-widget/user-widget.component.ts:86</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onShowSettings"></a>
+                        <span class="name">
+                            <b>
+                            onShowSettings
+                            </b>
+                            <a href="#onShowSettings"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>onShowSettings()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="74" class="link-to-prism">projects/sticos-widgets/src/lib/components/user-widget/user-widget.component.ts:74</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="allUsers"></a>
+                        <span class="name">
+                            <b>
+                            allUsers
+                            </b>
+                            <a href="#allUsers"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>allUsers:     <code>IUser[]</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>IUser[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">projects/sticos-widgets/src/lib/components/user-widget/user-widget.component.ts:41</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="claimsUser"></a>
+                        <span class="name">
+                            <b>
+                            claimsUser
+                            </b>
+                            <a href="#claimsUser"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>claimsUser:     <code>IClaimsUser</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>IClaimsUser</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">projects/sticos-widgets/src/lib/components/user-widget/user-widget.component.ts:45</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="popupVisible"></a>
+                        <span class="name">
+                            <b>
+                            popupVisible
+                            </b>
+                            <a href="#popupVisible"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>popupVisible:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">projects/sticos-widgets/src/lib/components/user-widget/user-widget.component.ts:38</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="settingsProxy"></a>
+                        <span class="name">
+                            <b>
+                            settingsProxy
+                            </b>
+                            <a href="#settingsProxy"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>settingsProxy:     <code>IUser</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>IUser</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">projects/sticos-widgets/src/lib/components/user-widget/user-widget.component.ts:37</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sticosWidgetOptions"></a>
+                        <span class="name">
+                            <b>
+                            sticosWidgetOptions
+                            </b>
+                            <a href="#sticosWidgetOptions"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>sticosWidgetOptions:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @SticosWidgetMeta(UserWidgetComponent)<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">projects/sticos-widgets/src/lib/components/user-widget/user-widget.component.ts:44</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="user"></a>
+                        <span class="name">
+                            <b>
+                            user
+                            </b>
+                            <a href="#user"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>user:     <code>IUser</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>IUser</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">projects/sticos-widgets/src/lib/components/user-widget/user-widget.component.ts:40</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="userForm"></a>
+                        <span class="name">
+                            <b>
+                            userForm
+                            </b>
+                            <a href="#userForm"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>userForm:     <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">projects/sticos-widgets/src/lib/components/user-widget/user-widget.component.ts:39</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Input, TemplateRef } from &#x27;@angular/core&#x27;;
+import {
+  SticosWidget,
+  SticosWidgetMeta,
+} from &#x27;../../decorators/sticos-widget.decorator&#x27;;
+import { WidgetService } from &#x27;../../services/widget.service&#x27;;
+import { FormGroup, FormBuilder } from &#x27;@angular/forms&#x27;;
+import { UserCacheService } from &#x27;../../services/user-cache.service&#x27;;
+import { UserService, IUser, IClaimsUser } from &#x27;@sticos/apis/common&#x27;;
+
+@Component({
+  selector: &#x27;sw-user-widget&#x27;,
+  templateUrl: &#x27;./user-widget.component.html&#x27;,
+  styleUrls: [&#x27;./user-widget.component.scss&#x27;],
+  providers: [UserService],
+})
+@SticosWidget({
+  widgetName: &#x27;UserWidget&#x27;,
+  headerName: &#x27;User&#x27;,
+  options: {
+    defaultHeight: 2,
+    defaultWidth: 4,
+    minHeight: 2,
+    minWidth: 3,
+  },
+})
+export class UserWidgetComponent implements OnInit {
+  @Input()
+  mod: string;
+  @Input()
+  settings: IUser;
+  @Input()
+  widgetId: string;
+  @Input()
+  loadingTemplate: TemplateRef&lt;any&gt;;
+
+  settingsProxy: IUser;
+  popupVisible &#x3D; false;
+  userForm: FormGroup;
+  user: IUser;
+  allUsers: IUser[] &#x3D; [];
+
+  @SticosWidgetMeta(UserWidgetComponent)
+  sticosWidgetOptions: any;
+  claimsUser: IClaimsUser;
+
+  constructor(
+    private userCacheService: UserCacheService,
+    private fb: FormBuilder,
+    private userService: UserService,
+    private widgetService: WidgetService,
+  ) {
+    this.userCacheService.ClaimsUser().subscribe(claimsUser &#x3D;&gt; {
+      this.claimsUser &#x3D; claimsUser;
+    });
+  }
+
+  ngOnInit() {
+    this.userForm &#x3D; this.fb.group({
+      id: [],
+    });
+
+    if (!this.mod) {
+      this.mod &#x3D; &#x27;default&#x27;;
+    }
+
+    if (!this.settings || !this.settings.userId) {
+      this.onShowSettings();
+    } else {
+      this.user &#x3D; this.settings;
+    }
+  }
+
+  onShowSettings() {
+    this.userService
+      .Search({ customerId: this.claimsUser.customerId.toString() })
+      .subscribe((users: IUser[]) &#x3D;&gt; {
+        this.allUsers &#x3D; users;
+        this.settingsProxy &#x3D; this.settings;
+        const userId &#x3D; this.settingsProxy ? this.settingsProxy.userId : null;
+        this.userForm.setValue({ id: userId });
+        this.popupVisible &#x3D; true;
+      });
+  }
+
+  onSettingsSaved() {
+    this.user &#x3D; this.allUsers.find(x &#x3D;&gt; x.userId &#x3D;&#x3D;&#x3D; +this.userForm.value.id);
+    this.settings &#x3D; this.user;
+    this.widgetService.settingsChanged({
+      settings: this.user,
+      widgetId: this.widgetId,
+    });
+    this.popupVisible &#x3D; false;
+  }
+
+  onDeleteWidget() {
+    this.widgetService.deleteWidget(this.widgetId);
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;sw-widget&gt;
+  &lt;sw-widget-header [title]&#x3D;&quot;sticosWidgetOptions.headerName&quot;&gt;
+    &lt;div dropdown&gt;
+      &lt;li role&#x3D;&quot;menuitem&quot;&gt;
+        &lt;a class&#x3D;&quot;dropdown-item&quot; (click)&#x3D;&quot;onDeleteWidget()&quot;&gt;
+          &lt;i class&#x3D;&quot;fal fa-trash-alt&quot;&gt;&lt;/i&gt; Remove
+        &lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li role&#x3D;&quot;menuitem&quot;&gt;
+        &lt;a class&#x3D;&quot;dropdown-item&quot; (click)&#x3D;&quot;onShowSettings()&quot;&gt;
+          &lt;i class&#x3D;&quot;fal fa-cog&quot;&gt;&lt;/i&gt; Settings
+        &lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/div&gt;
+  &lt;/sw-widget-header&gt;
+  &lt;sw-widget-body class&#x3D;&quot;no-overflow&quot;&gt;
+    &lt;div [ngSwitch]&#x3D;&quot;mod&quot; *ngIf&#x3D;&quot;user&quot; class&#x3D;&quot;h-100&quot;&gt;
+      &lt;sw-user-widget-default *ngSwitchCase&#x3D;&quot;&#x27;default&#x27;&quot; [settings]&#x3D;&quot;settings&quot; [user]&#x3D;&quot;user&quot;&gt;&lt;/sw-user-widget-default&gt;
+    &lt;/div&gt;
+  &lt;/sw-widget-body&gt;
+  &lt;sw-widget-footer&gt;
+  &lt;/sw-widget-footer&gt;
+&lt;/sw-widget&gt;
+
+&lt;dx-popup class&#x3D;&quot;popup&quot; [width]&#x3D;&quot;300&quot; [height]&#x3D;&quot;250&quot; [showTitle]&#x3D;&quot;true&quot; title&#x3D;&quot;Chose user&quot; [dragEnabled]&#x3D;&quot;false&quot; [closeOnOutsideClick]&#x3D;&quot;true&quot;
+  [(visible)]&#x3D;&quot;popupVisible&quot;&gt;
+  &lt;div *dxTemplate&#x3D;&quot;let data of &#x27;content&#x27;&quot;&gt;
+    &lt;form [formGroup]&#x3D;&quot;userForm&quot; class&#x3D;&quot;user-form&quot;&gt;
+      &lt;select formControlName&#x3D;&quot;id&quot; class&#x3D;&quot;form-control&quot;&gt;
+        &lt;option *ngFor&#x3D;&quot;let u of allUsers&quot; [value]&#x3D;&quot;u.id&quot;&gt;{{u.firstName}} {{u.lastName}}&lt;/option&gt;
+      &lt;/select&gt;
+      &lt;div class&#x3D;&quot;btn-toolbar&quot;&gt;
+        &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-primary&quot; (click)&#x3D;&quot;onSettingsSaved()&quot;&gt;Save&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+&lt;/dx-popup&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./user-widget.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">:host {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.btn-toolbar{
+  margin-top: 5px;
+}
+
+.no-overflow {
+  overflow-y: hidden;
+}
+
+.user-form {
+  margin-top: 15%;
+}
+
+.spinner {
+  position: absolute;
+  top: 0;
+  left:0;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><sw-widget>  <sw-widget-header [title]="sticosWidgetOptions.headerName">    <div dropdown>      <li role="menuitem">        <a class="dropdown-item" (click)="onDeleteWidget()">          <i class="fal fa-trash-alt"></i> Remove        </a>      </li>      <li role="menuitem">        <a class="dropdown-item" (click)="onShowSettings()">          <i class="fal fa-cog"></i> Settings        </a>      </li>    </div>  </sw-widget-header>  <sw-widget-body class="no-overflow">    <div [ngSwitch]="mod" *ngIf="user" class="h-100">      <sw-user-widget-default *ngSwitchCase="\'default\'" [settings]="settings" [user]="user"></sw-user-widget-default>    </div>  </sw-widget-body>  <sw-widget-footer>  </sw-widget-footer></sw-widget><dx-popup class="popup" [width]="300" [height]="250" [showTitle]="true" title="Chose user" [dragEnabled]="false" [closeOnOutsideClick]="true"  [(visible)]="popupVisible">  <div *dxTemplate="let data of \'content\'">    <form [formGroup]="userForm" class="user-form">      <select formControlName="id" class="form-control">        <option *ngFor="let u of allUsers" [value]="u.id">{{u.firstName}} {{u.lastName}}</option>      </select>      <div class="btn-toolbar">        <button type="submit" class="btn btn-primary" (click)="onSettingsSaved()">Save</button>      </div>    </form>  </div></dx-popup></div>'
+    var COMPONENTS = [{'name': 'AnomalyWidgetComponent', 'selector': 'sw-anomaly-widget'},{'name': 'AnomalyWidgetDefaultComponent', 'selector': 'sw-anomaly-widget-default'},{'name': 'ComicWidgetComponent', 'selector': 'sw-comic-widget'},{'name': 'ComicWidgetDefaultComponent', 'selector': 'sw-comic-widget-default'},{'name': 'DashboardComponent', 'selector': 'sw-dashboard'},{'name': 'DashboardMenuComponent', 'selector': 'sw-dashboard-menu'},{'name': 'EmployeeWidgetComponent', 'selector': 'sw-employee-widget'},{'name': 'EmployeeWidgetDefaultComponent', 'selector': 'sw-employee-widget-default'},{'name': 'NewsWidgetComponent', 'selector': 'sw-news-widget'},{'name': 'NewsWidgetDefaultComponent', 'selector': 'sw-news-widget-default'},{'name': 'PresenceWidgetComponent', 'selector': 'sw-presence-widget'},{'name': 'PresenceWidgetDefaultComponent', 'selector': 'sw-presence-widget-default'},{'name': 'RssReaderComponent', 'selector': 'sw-rss-reader-widget'},{'name': 'RssReaderWidgetDefaultComponent', 'selector': 'sw-rss-reader-widget-default'},{'name': 'UserWidgetComponent', 'selector': 'sw-user-widget'},{'name': 'UserWidgetDefaultComponent', 'selector': 'sw-user-widget-default'},{'name': 'VacationBankWidgetComponent', 'selector': 'sw-vacation-bank-widget'},{'name': 'VacationBankWidgetDefaultComponent', 'selector': 'sw-vacation-bank-widget-default'},{'name': 'WeatherWidgetComponent', 'selector': 'sw-weather-widget'},{'name': 'WeatherWidgetDefaultComponent', 'selector': 'sw-weather-widget-default'},{'name': 'WidgetBodyComponent', 'selector': 'sw-widget-body'},{'name': 'WidgetComponent', 'selector': 'sw-widget'},{'name': 'WidgetFooterComponent', 'selector': 'sw-widget-footer'},{'name': 'WidgetHeaderComponent', 'selector': 'sw-widget-header'}];
+    var DIRECTIVES = [{'name': 'VacationBankDirective', 'selector': '[swVacationBank]'},{'name': 'WidgetDirective', 'selector': '[swWidget]'}];
+    var ACTUAL_COMPONENT = {'name': 'UserWidgetComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'UserWidgetComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

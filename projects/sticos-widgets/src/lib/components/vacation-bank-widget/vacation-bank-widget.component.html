@@ -1,0 +1,35 @@
+<sw-widget>
+  <sw-widget-header [title]="sticosWidgetOptions.headerName">
+      <div buttons class="anomaly-header-button">
+          <button class="btn btn-primary vacation-header-button">Søk
+          </button>
+        </div>
+     <div dropdown>
+      <li role="menuitem">
+        <a class="dropdown-item" (click)="onDeleteWidget()">
+          <i class="fal fa-trash-alt"></i> Remove
+        </a>
+      </li>
+    </div>
+    <div class="header-years-container default-color" additional-header-content>
+      <span class="years-items"  *ngFor="let year of years;" [ngClass]="{'active': selectedYear === year}" (click)="onSelectYear(year)">{{year}}</span>
+    </div>
+  </sw-widget-header>
+  <sw-widget-body>
+    <div class="h-100">
+      <div [ngSwitch]="mod" class="h-100 vacation-bank-content-wrapper">
+        <sw-vacation-bank-widget-default [vacationBank]="vacationBank" [loadingData]="loadingData" *ngSwitchCase="'default'" class="vacation-bank-content">
+          <ng-content *ngTemplateOutlet="loadingTemplate"></ng-content>
+        </sw-vacation-bank-widget-default>
+      </div>
+    </div>
+  </sw-widget-body>
+  <sw-widget-footer>
+    <div class="footer-type-container default-color" *ngIf="vacationBank">
+      <div class="type-items" *ngFor="let vacationBankChild of vacationBank.values">
+            <div class="type-items-value">{{ vacationBankChild.value }}</div>
+            <div>{{ vacationBankChild.name | enumReader:'VacationBankType' }}</div>
+      </div>
+    </div>
+  </sw-widget-footer>
+</sw-widget>

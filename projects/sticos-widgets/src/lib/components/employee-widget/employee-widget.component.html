@@ -1,0 +1,18 @@
+<sw-widget>
+  <sw-widget-header [title]="sticosWidgetOptions.headerName">
+    <div dropdown>
+      <li role="menuitem">
+        <a class="dropdown-item" (click)="onDeleteWidget()">
+          <i class="fal fa-trash-alt"></i> Remove
+        </a>
+      </li>
+    </div>
+  </sw-widget-header>
+  <sw-widget-body class="employee-content">
+    <div [ngSwitch]="mod" class="h-100">
+      <sw-employee-widget-default *ngSwitchCase="'default'">
+        <ng-content *ngTemplateOutlet="loadingTemplate"></ng-content>
+      </sw-employee-widget-default>
+    </div>
+  </sw-widget-body>
+</sw-widget>

@@ -1,0 +1,33 @@
+<sw-widget>
+  <sw-widget-header [title]="sticosWidgetOptions.headerName">
+      <div buttons class="anomaly-header-button">
+          <button class="btn btn-primary anomaly-header-button new-button">New </button>
+        </div>  
+      <div dropdown>
+          <li role="menuitem">
+            <a class="dropdown-item" (click)="onDeleteWidget()">
+              <i class="fal fa-trash-alt"></i> Remove
+            </a>
+          </li>
+        </div>
+  </sw-widget-header>
+  <sw-widget-body>
+      <div [ngSwitch]="mod" class="h-100">
+          <div class="header-years-container default-color">
+              <a class="years-items" *ngFor="let year of yearsLink;" [ngClass]="{'active': selectedYear === year}" (click)="onSelectYear(year)">
+                  {{ year }}
+                </a>
+            </div>
+        <sw-absence-widget-default *ngSwitchCase="'default'"
+        [absence]="absence">
+          <ng-content *ngTemplateOutlet="loadingTemplate"></ng-content>
+        </sw-absence-widget-default>
+      </div>
+    </sw-widget-body>
+    <sw-widget-footer>
+        <div class="text-right">
+            <a class="statistic-link"> See staticstics </a>   
+        </div>
+      </sw-widget-footer>
+  </sw-widget>
+  

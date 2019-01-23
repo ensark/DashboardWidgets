@@ -1,0 +1,11 @@
+<div class="content-height comic-content-wrapper" *ngIf="settings; else loading">
+  <div class="comic-content">
+    <img src="{{settings.image}}" alt="Cannot display image" class="comic-content-image">
+  </div>
+</div>
+
+<ng-template #loading>
+  <div class="content-height">
+    <ng-content></ng-content>
+  </div>
+</ng-template>

@@ -1,0 +1,795 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>sticos-widgets-source documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/vagrant.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">sticos-widgets-source documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>AnomalyWidgetDefaultComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>projects/sticos-widgets/src/lib/components/anomaly-widget/anomaly-widget-default/anomaly-widget-default.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>sw-anomaly-widget-default</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./anomaly-widget-default.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./anomaly-widget-default.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#dataSource">dataSource</a>
+                            </li>
+                            <li>
+                                <a href="#filterSubscription">filterSubscription</a>
+                            </li>
+                            <li>
+                                <a href="#name">name</a>
+                            </li>
+                            <li>
+                                <a href="#shouldScroll">shouldScroll</a>
+                            </li>
+                            <li>
+                                <a href="#user">user</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getDataSource">getDataSource</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnDestroy">ngOnDestroy</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(userCacheService: <a href="../injectables/UserCacheService.html">UserCacheService</a>, anomalyService: AnomalyService, anomalyEventService: <a href="../injectables/AnomalyEventService.html">AnomalyEventService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">projects/sticos-widgets/src/lib/components/anomaly-widget/anomaly-widget-default/anomaly-widget-default.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>userCacheService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/UserCacheService.html" target="_self" >UserCacheService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>anomalyService</td>
+                                                  
+                                                        <td>
+                                                                    <code>AnomalyService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>anomalyEventService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/AnomalyEventService.html" target="_self" >AnomalyEventService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getDataSource"></a>
+                        <span class="name">
+                            <b>
+                            getDataSource
+                            </b>
+                            <a href="#getDataSource"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getDataSource()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">projects/sticos-widgets/src/lib/components/anomaly-widget/anomaly-widget-default/anomaly-widget-default.component.ts:40</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnDestroy"></a>
+                        <span class="name">
+                            <b>
+                            ngOnDestroy
+                            </b>
+                            <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ngOnDestroy()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">projects/sticos-widgets/src/lib/components/anomaly-widget/anomaly-widget-default/anomaly-widget-default.component.ts:65</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnInit"></a>
+                        <span class="name">
+                            <b>
+                            ngOnInit
+                            </b>
+                            <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ngOnInit()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">projects/sticos-widgets/src/lib/components/anomaly-widget/anomaly-widget-default/anomaly-widget-default.component.ts:26</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="dataSource"></a>
+                        <span class="name">
+                            <b>
+                            dataSource
+                            </b>
+                            <a href="#dataSource"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>dataSource:     <code>DataSource</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>DataSource</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">projects/sticos-widgets/src/lib/components/anomaly-widget/anomaly-widget-default/anomaly-widget-default.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="filterSubscription"></a>
+                        <span class="name">
+                            <b>
+                            filterSubscription
+                            </b>
+                            <a href="#filterSubscription"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>filterSubscription:     <code>Subscription</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Subscription</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">projects/sticos-widgets/src/lib/components/anomaly-widget/anomaly-widget-default/anomaly-widget-default.component.ts:14</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="name"></a>
+                        <span class="name">
+                            <b>
+                            name
+                            </b>
+                            <a href="#name"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>name:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">projects/sticos-widgets/src/lib/components/anomaly-widget/anomaly-widget-default/anomaly-widget-default.component.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="shouldScroll"></a>
+                        <span class="name">
+                            <b>
+                            shouldScroll
+                            </b>
+                            <a href="#shouldScroll"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>shouldScroll:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">projects/sticos-widgets/src/lib/components/anomaly-widget/anomaly-widget-default/anomaly-widget-default.component.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="user"></a>
+                        <span class="name">
+                            <b>
+                            user
+                            </b>
+                            <a href="#user"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>user:     <code>IUser</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>IUser</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">projects/sticos-widgets/src/lib/components/anomaly-widget/anomaly-widget-default/anomaly-widget-default.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnDestroy, OnInit } from &#x27;@angular/core&#x27;;
+import DataSource from &#x27;devextreme/data/data_source&#x27;;
+import { AnomalyEventService } from &#x27;../services/anomaly-event.service&#x27;;
+import { Subscription } from &#x27;rxjs&#x27;;
+import { AnomalyService, IUser } from &#x27;@sticos/apis/common&#x27;;
+import { UserCacheService } from &#x27;../../../services/user-cache.service&#x27;;
+
+@Component({
+  selector: &#x27;sw-anomaly-widget-default&#x27;,
+  templateUrl: &#x27;./anomaly-widget-default.component.html&#x27;,
+  styleUrls: [&#x27;./anomaly-widget-default.component.scss&#x27;],
+})
+export class AnomalyWidgetDefaultComponent implements OnInit, OnDestroy {
+  filterSubscription: Subscription;
+  name: string;
+  dataSource: DataSource;
+  shouldScroll: boolean;
+  user: IUser;
+
+  constructor(
+    private userCacheService: UserCacheService,
+    private anomalyService: AnomalyService,
+    private anomalyEventService: AnomalyEventService,
+  ) {}
+
+  ngOnInit(): void {
+    this.userCacheService.ClaimsUser().subscribe(user &#x3D;&gt; {
+      this.user &#x3D; user;
+      this.dataSource &#x3D; this.getDataSource();
+
+      this.filterSubscription &#x3D; this.anomalyEventService.filter.subscribe(
+        name &#x3D;&gt; {
+          this.name &#x3D; name;
+          this.dataSource &#x3D; this.getDataSource();
+        },
+      );
+    });
+  }
+
+  getDataSource() {
+    const __this &#x3D; this;
+    return new DataSource({
+      pageSize: 10,
+      load(loadOptions) {
+        let query: AnomalyService.SearchParams &#x3D; {
+          Skip: loadOptions.skip,
+          Take: loadOptions.take,
+          customerId: __this.user.customerId.toString(),
+        };
+        if (__this.name) {
+          query &#x3D; Object.assign(query, { Responsible: __this.name });
+        }
+        return __this.anomalyService
+          .Search(query)
+          .toPromise()
+          .then(data &#x3D;&gt; {
+            return {
+              data,
+            };
+          });
+      },
+    });
+  }
+
+  ngOnDestroy() {
+    this.filterSubscription.unsubscribe();
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;content-height&quot; [ngClass]&#x3D;&quot;{&#x27;ps__child--consume&#x27;: shouldScroll}&quot; (mouseenter)&#x3D;&quot;shouldScroll &#x3D; true&quot; (mouseleave)&#x3D;&quot;shouldScroll &#x3D; false&quot;&gt;
+  &lt;div class&#x3D;&quot;anomaly-content&quot;&gt;
+    &lt;dx-data-grid id&#x3D;&quot;grid-container&quot; [dataSource]&#x3D;&quot;dataSource&quot; [showRowLines]&#x3D;&quot;true&quot; [showColumnLines]&#x3D;&quot;false&quot; [showBorders]&#x3D;&quot;false&quot;
+      [remoteOperations]&#x3D;&quot;true&quot; [columnAutoWidth]&#x3D;&quot;true&quot; [wordWrapEnabled]&#x3D;&quot;true&quot;&gt;
+
+      &lt;dxo-scrolling
+        mode&#x3D;&quot;infinite&quot;
+        showScrollbar&#x3D;&quot;always&quot;&gt;
+      &lt;/dxo-scrolling&gt;
+
+
+      &lt;dxi-column dataField&#x3D;&quot;date&quot; caption&#x3D;&quot;Date&quot; dataType&#x3D;&quot;date&quot;&gt;&lt;/dxi-column&gt;
+      &lt;dxi-column dataField&#x3D;&quot;location&quot; caption&#x3D;&quot;Place&quot;&gt;&lt;/dxi-column&gt;
+      &lt;dxi-column dataField&#x3D;&quot;description&quot; id&#x3D;&quot;description&quot; caption&#x3D;&quot;Description&quot;&gt;&lt;/dxi-column&gt;
+      &lt;dxi-column dataField&#x3D;&quot;responsible&quot; caption&#x3D;&quot;Responsible&quot; cellTemplate&#x3D;&quot;userCellTemplate&quot;&gt;&lt;/dxi-column&gt;
+      &lt;dxi-column dataField&#x3D;&quot;deadline&quot; dataType&#x3D;&quot;date&quot; caption&#x3D;&quot;Deadline&quot;&gt;&lt;/dxi-column&gt;
+      &lt;dxi-column dataField&#x3D;&quot;status&quot; caption&#x3D;&quot;Status&quot; cellTemplate&#x3D;&quot;cellTemplate&quot;&gt;&lt;/dxi-column&gt;
+
+      &lt;div *dxTemplate&#x3D;&quot;let data of &#x27;cellTemplate&#x27;&quot;&gt;
+        &lt;div [class.grid-status]&#x3D;&quot;data.value &#x3D;&#x3D;&#x3D; &#x27;OnGoing&#x27;&quot;&gt;
+          {{ data.value }}
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div *dxTemplate&#x3D;&quot;let data of &#x27;userCellTemplate&#x27;&quot;&gt;
+        &lt;div&gt;
+          &lt;a class&#x3D;&quot;responsible-user&quot;&gt; {{ data.value }}&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/dx-data-grid&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./anomaly-widget-default.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">::ng-deep #grid-container td {
+   height: 30px;
+}
+
+::ng-deep #grid-container .dx-datagrid-headers tr:first-child {
+   background-color: #003b5c;
+   color: white;
+   font-weight: 640;
+}
+
+::ng-deep #grid-container .dx-datagrid-headers .dx-datagrid-content {
+   border-radius: 5px;
+}
+
+
+.content-height,
+.anomaly-content,
+::ng-deep #grid-container {
+  height: 100%;
+}
+
+.grid-status {
+  color: var(--success);
+}
+
+.responsible-user {
+  cursor: pointer;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="content-height" [ngClass]="{\'ps__child--consume\': shouldScroll}" (mouseenter)="shouldScroll = true" (mouseleave)="shouldScroll = false">  <div class="anomaly-content">    <dx-data-grid id="grid-container" [dataSource]="dataSource" [showRowLines]="true" [showColumnLines]="false" [showBorders]="false"      [remoteOperations]="true" [columnAutoWidth]="true" [wordWrapEnabled]="true">      <dxo-scrolling        mode="infinite"        showScrollbar="always">      </dxo-scrolling>      <dxi-column dataField="date" caption="Date" dataType="date"></dxi-column>      <dxi-column dataField="location" caption="Place"></dxi-column>      <dxi-column dataField="description" id="description" caption="Description"></dxi-column>      <dxi-column dataField="responsible" caption="Responsible" cellTemplate="userCellTemplate"></dxi-column>      <dxi-column dataField="deadline" dataType="date" caption="Deadline"></dxi-column>      <dxi-column dataField="status" caption="Status" cellTemplate="cellTemplate"></dxi-column>      <div *dxTemplate="let data of \'cellTemplate\'">        <div [class.grid-status]="data.value === \'OnGoing\'">          {{ data.value }}        </div>      </div>      <div *dxTemplate="let data of \'userCellTemplate\'">        <div>          <a class="responsible-user"> {{ data.value }}</a>        </div>      </div>    </dx-data-grid>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AnomalyWidgetComponent', 'selector': 'sw-anomaly-widget'},{'name': 'AnomalyWidgetDefaultComponent', 'selector': 'sw-anomaly-widget-default'},{'name': 'ComicWidgetComponent', 'selector': 'sw-comic-widget'},{'name': 'ComicWidgetDefaultComponent', 'selector': 'sw-comic-widget-default'},{'name': 'DashboardComponent', 'selector': 'sw-dashboard'},{'name': 'DashboardMenuComponent', 'selector': 'sw-dashboard-menu'},{'name': 'EmployeeWidgetComponent', 'selector': 'sw-employee-widget'},{'name': 'EmployeeWidgetDefaultComponent', 'selector': 'sw-employee-widget-default'},{'name': 'NewsWidgetComponent', 'selector': 'sw-news-widget'},{'name': 'NewsWidgetDefaultComponent', 'selector': 'sw-news-widget-default'},{'name': 'PresenceWidgetComponent', 'selector': 'sw-presence-widget'},{'name': 'PresenceWidgetDefaultComponent', 'selector': 'sw-presence-widget-default'},{'name': 'RssReaderComponent', 'selector': 'sw-rss-reader-widget'},{'name': 'RssReaderWidgetDefaultComponent', 'selector': 'sw-rss-reader-widget-default'},{'name': 'UserWidgetComponent', 'selector': 'sw-user-widget'},{'name': 'UserWidgetDefaultComponent', 'selector': 'sw-user-widget-default'},{'name': 'VacationBankWidgetComponent', 'selector': 'sw-vacation-bank-widget'},{'name': 'VacationBankWidgetDefaultComponent', 'selector': 'sw-vacation-bank-widget-default'},{'name': 'WeatherWidgetComponent', 'selector': 'sw-weather-widget'},{'name': 'WeatherWidgetDefaultComponent', 'selector': 'sw-weather-widget-default'},{'name': 'WidgetBodyComponent', 'selector': 'sw-widget-body'},{'name': 'WidgetComponent', 'selector': 'sw-widget'},{'name': 'WidgetFooterComponent', 'selector': 'sw-widget-footer'},{'name': 'WidgetHeaderComponent', 'selector': 'sw-widget-header'}];
+    var DIRECTIVES = [{'name': 'VacationBankDirective', 'selector': '[swVacationBank]'},{'name': 'WidgetDirective', 'selector': '[swWidget]'}];
+    var ACTUAL_COMPONENT = {'name': 'AnomalyWidgetDefaultComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'AnomalyWidgetDefaultComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

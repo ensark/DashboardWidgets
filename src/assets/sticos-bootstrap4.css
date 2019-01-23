@@ -1,0 +1,558 @@
+/* Override bootstrap 4 standards for Sticos profile
+---------------------------------------------------------------- */
+
+/* Base
+---------------------------------------------------------------- */
+body {
+  background-color: #efefef;
+  overflow-x: hidden;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* IE10+ CSS styles go here */
+
+  /* Top menu padding */
+  .main-content {
+    top: 99px;
+  }
+}
+
+/* Sidemenu
+---------------------------------------------------------------- */
+.sidemenu {
+  position: fixed;
+  top: 95px;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Layout
+---------------------------------------------------------------- */
+.left-col-content {
+
+}
+
+.center-col-content {
+
+}
+
+.right-col-content {
+
+}
+
+/* Progress bar
+---------------------------------------------------------------- */
+.progress-bar {
+  background-color: #003b5c !important;
+}
+
+/* Colors
+---------------------------------------------------------------- */
+.bg-primary {
+  background-color: #003b5c !important;
+}
+
+.bg-secondary {
+  background-color: #00b0b9 !important;
+}
+
+.bg-dark {
+  background-color: #003b5c !important;
+}
+
+.bg-support-orange {
+  background-color: #f7a700 !important;
+}
+
+.bg-support-teal {
+  background-color: #008fbe !important;
+}
+
+.bg-support-gray {
+  background-color: #b3a7a1 !important;
+}
+
+.bg-support-purple {
+  background-color: #534f75 !important;
+}
+
+.bg-danger {
+  background-color: #ef3340 !important;
+}
+
+.bg-success {
+  background-color: #39a828 !important;
+}
+
+/* Navbar
+---------------------------------------------------------------- */
+.sticos-logo {
+  margin-top: 2px;
+  height: 30px;
+}
+
+.navbar > a.nav-link
+{
+  color: #fff !important;
+}
+
+.navbar-dark .navbar-text a {
+  color: #fff !important;
+}
+
+.navbar-dark .navbar-toggler {
+  color: #fff !important;
+  border: none;
+}
+
+.nav-scroller {
+  z-index: 1019;
+  height: 2.75rem;
+  top: 56px;
+  overflow-y: hidden;
+}
+
+@media (max-width: 767.98px) {
+  .offcanvas-collapse {
+    position: fixed;
+    top: 48px; /* Height of navbar */
+    bottom: 0;
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    overflow-y: auto;
+    background-color: var(--gray-dark);
+    transition: -webkit-transform .3s ease-in-out;
+    transition: transform .3s ease-in-out;
+    transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    background-color: #003b5c !important;
+    z-index: 1022;
+  }
+
+  .offcanvas-collapse.open {
+    -webkit-transform: translateX(-1rem);
+    transform: translateX(-1rem); /* Account for horizontal padding on navbar */
+    background-color: #003b5c !important;
+  }
+
+  .nav-scroller {
+    top: 49px;
+  }
+}
+
+.nav-scroller .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  color: rgba(255, 255, 255, .75);
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav-underline .nav-link {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: .875rem;
+  font-weight: normal;
+}
+
+.nav-underline .nav-link:hover {
+  color: var(--blue);
+  background-color: #f8f9fa;
+}
+
+.nav-underline .active {
+  font-weight: 500;
+  color: var(--gray-dark);
+}
+
+.hamburgerToggle {
+  font-size: 21px;
+  cursor: pointer;
+}
+
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+/* Buttons and links
+---------------------------------------------------------------- */
+.btn {
+  cursor: pointer;
+}
+
+.nav-link,
+.btn-link {
+    color: #003b5c !important;
+}
+
+p a:not(.btn) {
+  text-decoration: underline;
+}
+
+a {
+    color: #003b5c !important;
+    font-weight: 600;
+}
+
+a:hover {
+    color: #002243;
+}
+
+.btn-primary {
+    color: #fff !important;
+    background-color: #003b5c !important;
+    border-color: #003b5c !important;
+}
+
+.btn-primary:hover {
+    color: #fff !important;
+    background-color: #002243 !important;
+    border-color: #002243 !important;
+}
+
+.btn-primary:active {
+    color: #fff;
+    background-color: #002243 !important;
+    border-color: #002243 !important;
+    box-shadow: 0 0 0 0.2rem rgba(0, 34, 67,.5) !important;
+}
+
+.btn-outline-primary,
+.btn-default {
+    color: #003b5c !important;
+    background-color: #fff !important;
+    background-image: none !important;
+    border-color: #003b5c !important;
+}
+
+.btn-default:hover {
+  background-color: #dad8d8 !important;
+}
+
+.btn-outline-primary:hover {
+    color: #fff !important;
+    background-color: #003b5c !important;
+    border-color: #003b5c !important;
+}
+
+.btn-outline-primary:active {
+    color: #fff !important;
+    background-color: #003b5c !important;
+    border-color: #003b5c !important;
+    box-shadow: 0 0 0 0.2rem rgba(0, 34, 67,.5) !important;
+}
+/* Cards
+---------------------------------------------------------------- */
+.card-header {
+  background-color: #fff !important;
+}
+
+/* Badges
+---------------------------------------------------------------- */
+.badge-primary {
+    background-color: #003b5c;
+}
+
+/* få litt luft under widgeter og componenter */
+.card {
+    margin-bottom: 20px;
+}
+
+/* Grid
+---------------------------------------------------------------- */
+/* få litt luft under widgeter og componenter */
+.row +.row {
+    margin-top: 1rem;
+}
+
+/* List group
+---------------------------------------------------------------- */
+
+.list-group-item.active {
+  z-index: 2 !important;
+  font-weight: 600 !important;
+  background-color: #fff !important;
+  border: 1px solid rgba(0,0,0,.125);
+}
+
+.list-group-item.disabled {
+  color: #868e96;
+  background-color: #fff;
+}
+
+.list-group-item-action {
+  cursor: pointer;
+  font-weight: normal;
+}
+
+.sub-menu-link-icon {
+  vertical-align: middle;
+  font-size: 4px
+}
+
+/* Dropdown
+---------------------------------------------------------------- */
+div.nav-item.dropdown {
+  cursor: pointer;
+}
+
+ul.dropdown-menu {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+a.dropdown-item,
+a.list-group-item-action {
+  padding: 9px 30px;
+}
+
+.dropdown-item:active {
+  color: #fff !important;
+  text-decoration: none;
+  background-color: #003b5c !important;
+}
+
+/* Alerts
+---------------------------------------------------------------- */
+div.alert p {
+  margin-bottom: 0;
+}
+
+/* Wizard
+---------------------------------------------------------------- */
+.wizard-form-content {
+
+}
+
+.wizard-form-container {
+  border-left: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.wizardStepActive {
+  font-style: italic;
+}
+
+.wizardStepCompleted {
+  font-weight: bold;
+}
+
+.wizardCompleteIconColor {
+  color: #39a828;
+}
+
+.wizard-title-step {
+  cursor: pointer;
+  padding-bottom: 5px;
+}
+
+.wizard-title-step-horizontal {
+  cursor: pointer;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+.wizard-navigation-icons {
+  color: lightgray;
+  cursor: pointer;
+}
+
+/* Chat
+---------------------------------------------------------------- */
+.chat-window {
+  background-color: #fff;
+  position: fixed;
+  bottom: 0px;
+  right: 2%;
+  z-index: 1021;
+  border-radius: 3px 3px 0 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+  width: 300px;
+}
+
+.chat-window-large {
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  top: 65px;
+  right: 0;
+  z-index: 1021;
+  border-radius: 3px 3px 0 0;
+  -webkit-box-shadow: 0px 0px 15px 1px rgba(113, 106, 202, 0.2);
+  -moz-box-shadow: 0px 0px 15px 1px rgba(113, 106, 202, 0.2);
+  box-shadow: 0px 0px 15px 1px rgba(113, 106, 202, 0.2);
+  width: 455px;
+}
+
+.chat-window-closed {
+  background-color: #fff;
+  position: fixed;
+  bottom: 0px;
+  right: 2%;
+  z-index: 999;
+  border-radius: 3px 3px 0 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+  width: 300px;
+}
+
+.chat-top {
+  border-radius: 3px 3px 0 0;
+  background-color: #003b5c;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.chat-top-large {
+  border-radius: 3px 3px 0 0;
+  background-color: #003b5c;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.chat-top > h5 {
+  color: #fff;
+  margin: 0;
+}
+
+.chat-top-large > h5 {
+  color: #fff;
+  margin: 0;
+}
+
+.close-chat {
+  color: #fff;
+  margin-top: 4px;
+  cursor: pointer;
+}
+
+.chat-conversation {
+  height: 280px;
+  background-color: #f8f9fa;
+}
+
+.chat-conversation-large {
+  height: 100%;
+  background-color: #f8f9fa;
+}
+
+.chat-messages {
+  position: relative;
+  list-style: none;
+  padding: 20px 10px 20px 10px;
+  margin: 0;
+  overflow-y: scroll;
+  height: 100%;
+}
+
+.chat-message {
+  clear: both;
+  margin-bottom: 10px;
+}
+
+.chat-message:last-child {
+  margin-bottom: 80px;
+}
+
+.chat-input {
+  width: 100%;
+  border: none;
+  height: 40px;
+  border-top: 1px solid darkgrey;
+  padding: 10px 8px 6px 6px;
+}
+
+.chat-input-large {
+  width: 100%;
+  border: none;
+  height: 40px;
+  border-top: 1px solid darkgrey;
+  padding: 10px 8px 6px 6px;
+  bottom: 0;
+  position: fixed;
+}
+
+.chat-message-right {
+  float: right !important;
+  margin-left: 60px;
+}
+
+.chat-message-left {
+  float: left !important;
+  margin-right: 60px;
+}
+
+.chat-text-user{
+  background-color: #003b5c;
+  padding: 5px 8px 6px;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.chat-text-bot {
+  background-color: #f1f0f0;
+  padding: 5px 8px 6px;
+  border-radius: 5px;
+}
+
+.chat-else-at {
+  color: #f7a700;
+}
+
+@keyframes blink {
+  30% {
+         background-color: rgba(0,59,92,1)
+  }
+  50% {
+         background-color: rgba(0,59,92,.5)
+  }
+  100% {
+         background-color: rgba(0,59,92,1)
+  }
+}
+@-webkit-keyframes blink {
+  30% {
+         background-color: rgba(0,59,92,1)
+  }
+  50% {
+         background-color: rgba(0,59,92,.5)
+  }
+  100% {
+         background-color: rgba(0,59,92,1)
+  }
+}
+
+.new-message {
+  -moz-transition:all 0.5s;
+  -webkit-transition:all 0.5s;
+  -o-transition:all 0.5s;
+  -ms-transition:all 0.5s;
+  transition:all 0.5s;
+  -moz-animation:blink normal 2s infinite;
+  /* Firefox */
+  -webkit-animation:blink normal 2s infinite;
+  /* Webkit */
+  -ms-animation:blink normal 2s infinite;
+  /* IE */
+  animation:blink normal 2s infinite;
+  /* Opera */
+}
+
+
+/* Override bootstrap 4 standards for Sticos profile on Sticos Oppslag
+---------------------------------------------------------------- */
+
+.topicHeader {
+}
+
+.topicSubHeader {
+
+}

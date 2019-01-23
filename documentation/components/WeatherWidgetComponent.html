@@ -1,0 +1,1426 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>sticos-widgets-source documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/vagrant.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">sticos-widgets-source documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>WeatherWidgetComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>projects/sticos-widgets/src/lib/components/weather-widget/weather-widget.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">providers</td>
+                <td class="col-md-9">
+                            <code>TimeAgoPipe</code>
+                            <code><a href="../injectables/WeatherService.html" target="_self" >WeatherService</a></code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>sw-weather-widget</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./weather-widget.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./weather-widget.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_model">_model</a>
+                            </li>
+                            <li>
+                                <a href="#dataSource">dataSource</a>
+                            </li>
+                            <li>
+                                <a href="#formatter">formatter</a>
+                            </li>
+                            <li>
+                                <a href="#popupVisible">popupVisible</a>
+                            </li>
+                            <li>
+                                <a href="#settingsProxy">settingsProxy</a>
+                            </li>
+                            <li>
+                                <a href="#sticosWidgetOptions">sticosWidgetOptions</a>
+                            </li>
+                            <li>
+                                <a href="#warning">warning</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onDeleteWidget">onDeleteWidget</a>
+                            </li>
+                            <li>
+                                <a href="#onShowSettings">onShowSettings</a>
+                            </li>
+                            <li>
+                                <a href="#saveSettings">saveSettings</a>
+                            </li>
+                            <li>
+                                <a href="#sync">sync</a>
+                            </li>
+                            <li>
+                                <a href="#updateSettings">updateSettings</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#loadingTemplate">loadingTemplate</a>
+                            </li>
+                            <li>
+                                <a href="#mod">mod</a>
+                            </li>
+                            <li>
+                                <a href="#settings">settings</a>
+                            </li>
+                            <li>
+                                <a href="#widgetId">widgetId</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#formattedAddress">formattedAddress</a>
+                                </li>
+                                <li>
+                                    <a href="#model">model</a>
+                                </li>
+                                <li>
+                                    <a href="#lastSync">lastSync</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(weatherService: <a href="../injectables/WeatherService.html">WeatherService</a>, widgetService: <a href="../injectables/WidgetService.html">WidgetService</a>, timeAgoPipe: TimeAgoPipe)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">projects/sticos-widgets/src/lib/components/weather-widget/weather-widget.component.ts:52</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>weatherService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/WeatherService.html" target="_self" >WeatherService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>widgetService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/WidgetService.html" target="_self" >WidgetService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>timeAgoPipe</td>
+                                                  
+                                                        <td>
+                                                                    <code>TimeAgoPipe</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="loadingTemplate"></a>
+                        <code>loadingTemplate</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code>TemplateRef&lt;any&gt;</code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">projects/sticos-widgets/src/lib/components/weather-widget/weather-widget.component.ts:43</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="mod"></a>
+                        <code>mod</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">projects/sticos-widgets/src/lib/components/weather-widget/weather-widget.component.ts:37</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="settings"></a>
+                        <code>settings</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="../interfaces/IWeatherSettings.html" target="_self" >IWeatherSettings</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">projects/sticos-widgets/src/lib/components/weather-widget/weather-widget.component.ts:39</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="widgetId"></a>
+                        <code>widgetId</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">projects/sticos-widgets/src/lib/components/weather-widget/weather-widget.component.ts:41</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnInit"></a>
+                        <span class="name">
+                            <b>
+                            ngOnInit
+                            </b>
+                            <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ngOnInit()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">projects/sticos-widgets/src/lib/components/weather-widget/weather-widget.component.ts:60</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onDeleteWidget"></a>
+                        <span class="name">
+                            <b>
+                            onDeleteWidget
+                            </b>
+                            <a href="#onDeleteWidget"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>onDeleteWidget()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="102" class="link-to-prism">projects/sticos-widgets/src/lib/components/weather-widget/weather-widget.component.ts:102</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onShowSettings"></a>
+                        <span class="name">
+                            <b>
+                            onShowSettings
+                            </b>
+                            <a href="#onShowSettings"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>onShowSettings()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="106" class="link-to-prism">projects/sticos-widgets/src/lib/components/weather-widget/weather-widget.component.ts:106</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="saveSettings"></a>
+                        <span class="name">
+                            <b>
+                            saveSettings
+                            </b>
+                            <a href="#saveSettings"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>saveSettings()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="89" class="link-to-prism">projects/sticos-widgets/src/lib/components/weather-widget/weather-widget.component.ts:89</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sync"></a>
+                        <span class="name">
+                            <b>
+                            sync
+                            </b>
+                            <a href="#sync"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>sync()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="156" class="link-to-prism">projects/sticos-widgets/src/lib/components/weather-widget/weather-widget.component.ts:156</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="updateSettings"></a>
+                        <span class="name">
+                            <b>
+                            updateSettings
+                            </b>
+                            <a href="#updateSettings"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>updateSettings(event)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="160" class="link-to-prism">projects/sticos-widgets/src/lib/components/weather-widget/weather-widget.component.ts:160</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>event</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_model"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            _model
+                            </b>
+                            <a href="#_model"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>_model:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">projects/sticos-widgets/src/lib/components/weather-widget/weather-widget.component.ts:48</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="dataSource"></a>
+                        <span class="name">
+                            <b>
+                            dataSource
+                            </b>
+                            <a href="#dataSource"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>dataSource:     <code>DataSource</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>DataSource</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">projects/sticos-widgets/src/lib/components/weather-widget/weather-widget.component.ts:34</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="formatter"></a>
+                        <span class="name">
+                            <b>
+                            formatter
+                            </b>
+                            <a href="#formatter"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>formatter:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(result: any) &#x3D;&gt; {
+    if (
+      result.address_components.find(x &#x3D;&gt;
+        x.types.find(y &#x3D;&gt; y &#x3D;&#x3D;&#x3D; &#x27;locality&#x27;),
+      ) &amp;&amp;
+      result.address_components.find(x &#x3D;&gt; x.types.find(y &#x3D;&gt; y &#x3D;&#x3D;&#x3D; &#x27;country&#x27;))
+    ) {
+      const city &#x3D; result.address_components.find(x &#x3D;&gt;
+        x.types.find(y &#x3D;&gt; y &#x3D;&#x3D;&#x3D; &#x27;locality&#x27;),
+      ).long_name;
+      const country &#x3D; result.address_components.find(x &#x3D;&gt;
+        x.types.find(y &#x3D;&gt; y &#x3D;&#x3D;&#x3D; &#x27;country&#x27;),
+      ).short_name;
+      return &#x60;${city}, ${country}&#x60;;
+    } else {
+      return result.formatted_address;
+    }
+  }</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="111" class="link-to-prism">projects/sticos-widgets/src/lib/components/weather-widget/weather-widget.component.ts:111</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="popupVisible"></a>
+                        <span class="name">
+                            <b>
+                            popupVisible
+                            </b>
+                            <a href="#popupVisible"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>popupVisible:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">projects/sticos-widgets/src/lib/components/weather-widget/weather-widget.component.ts:33</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="settingsProxy"></a>
+                        <span class="name">
+                            <b>
+                            settingsProxy
+                            </b>
+                            <a href="#settingsProxy"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>settingsProxy:     <code><a href="../interfaces/IWeatherSettings.html" target="_self" >IWeatherSettings</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/IWeatherSettings.html" target="_self" >IWeatherSettings</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">projects/sticos-widgets/src/lib/components/weather-widget/weather-widget.component.ts:32</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sticosWidgetOptions"></a>
+                        <span class="name">
+                            <b>
+                            sticosWidgetOptions
+                            </b>
+                            <a href="#sticosWidgetOptions"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>sticosWidgetOptions:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @SticosWidgetMeta(WeatherWidgetComponent)<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">projects/sticos-widgets/src/lib/components/weather-widget/weather-widget.component.ts:46</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="warning"></a>
+                        <span class="name">
+                            <b>
+                            warning
+                            </b>
+                            <a href="#warning"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>warning:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">projects/sticos-widgets/src/lib/components/weather-widget/weather-widget.component.ts:35</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="formattedAddress"></a>
+                        <span class="name"><b>formattedAddress</b><a href="#formattedAddress"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>formattedAddress()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">projects/sticos-widgets/src/lib/components/weather-widget/weather-widget.component.ts:50</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="model"></a>
+                        <span class="name"><b>model</b><a href="#model"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>model()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="130" class="link-to-prism">projects/sticos-widgets/src/lib/components/weather-widget/weather-widget.component.ts:130</a></div>
+                                </td>
+                            </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>model(value)</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="134" class="link-to-prism">projects/sticos-widgets/src/lib/components/weather-widget/weather-widget.component.ts:134</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>value</td>
+                                                    
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="lastSync"></a>
+                        <span class="name"><b>lastSync</b><a href="#lastSync"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>lastSync()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="146" class="link-to-prism">projects/sticos-widgets/src/lib/components/weather-widget/weather-widget.component.ts:146</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Input, TemplateRef } from &#x27;@angular/core&#x27;;
+import {
+  SticosWidget,
+  SticosWidgetMeta,
+} from &#x27;../../decorators/sticos-widget.decorator&#x27;;
+import { IWeatherSettings } from &#x27;./models/weather-input&#x27;;
+import { Observable } from &#x27;rxjs&#x27;;
+import { switchMap } from &#x27;rxjs/operators&#x27;;
+import { WeatherService } from &#x27;./services/weather.service&#x27;;
+import { WidgetService } from &#x27;../../services/widget.service&#x27;;
+import { TimeAgoPipe } from &#x27;ngx-moment&#x27;;
+import * as _ from &#x27;lodash&#x27;;
+import DataSource from &#x27;devextreme/data/data_source&#x27;;
+
+@Component({
+  selector: &#x27;sw-weather-widget&#x27;,
+  templateUrl: &#x27;./weather-widget.component.html&#x27;,
+  styleUrls: [&#x27;./weather-widget.component.scss&#x27;],
+  providers: [TimeAgoPipe, WeatherService],
+})
+@SticosWidget({
+  widgetName: &#x27;WeatherWidget&#x27;,
+  headerName: &#x27;Weather&#x27;,
+  options: {
+    defaultHeight: 4,
+    defaultWidth: 3,
+    minHeight: 4,
+    minWidth: 3,
+  },
+})
+export class WeatherWidgetComponent implements OnInit {
+  settingsProxy: IWeatherSettings;
+  popupVisible &#x3D; false;
+  dataSource: DataSource;
+  warning: string;
+  @Input()
+  mod: string;
+  @Input()
+  settings: IWeatherSettings;
+  @Input()
+  widgetId: string;
+  @Input()
+  loadingTemplate: TemplateRef&lt;any&gt;;
+
+  @SticosWidgetMeta(WeatherWidgetComponent)
+  sticosWidgetOptions: any;
+
+  private _model: any;
+
+  get formattedAddress() {
+    return this.settingsProxy ? this.settingsProxy.name : &#x27;&#x27;;
+  }
+
+  constructor(
+    private weatherService: WeatherService,
+    private widgetService: WidgetService,
+    private timeAgoPipe: TimeAgoPipe,
+  ) {}
+
+  ngOnInit() {
+    if (!this.mod) {
+      this.mod &#x3D; &#x27;default&#x27;;
+    }
+
+    if (!this.settings) {
+      this.onShowSettings();
+    }
+
+    const __this &#x3D; this;
+    this.dataSource &#x3D; new DataSource({
+      load(loadOptions) {
+        __this.warning &#x3D; &#x27;Searching...&#x27;;
+        return __this.weatherService
+          .getGeolocation(loadOptions.searchValue)
+          .toPromise()
+          .then(
+            data &#x3D;&gt; {
+              __this.warning &#x3D; data.length ? &#x27;&#x27; : &#x27;No result found!&#x27;;
+              return {
+                data,
+              };
+            },
+            error &#x3D;&gt; (__this.warning &#x3D; &#x27;Something bad occurred!&#x27;),
+          );
+      },
+    });
+  }
+
+  saveSettings() {
+    this.settingsProxy.settingsSkip &#x3D; this.settingsProxy.location
+      ? false
+      : true;
+    this.settings &#x3D; this.settingsProxy;
+    this.widgetService.settingsChanged({
+      settings: this.settings,
+      widgetId: this.widgetId,
+    });
+    this.popupVisible &#x3D; false;
+    this.settingsProxy &#x3D; null;
+  }
+
+  onDeleteWidget() {
+    this.widgetService.deleteWidget(this.widgetId);
+  }
+
+  onShowSettings() {
+    this.settingsProxy &#x3D; this.settings ? _.cloneDeep(this.settings) : {};
+    this.popupVisible &#x3D; true;
+  }
+
+  formatter &#x3D; (result: any) &#x3D;&gt; {
+    if (
+      result.address_components.find(x &#x3D;&gt;
+        x.types.find(y &#x3D;&gt; y &#x3D;&#x3D;&#x3D; &#x27;locality&#x27;),
+      ) &amp;&amp;
+      result.address_components.find(x &#x3D;&gt; x.types.find(y &#x3D;&gt; y &#x3D;&#x3D;&#x3D; &#x27;country&#x27;))
+    ) {
+      const city &#x3D; result.address_components.find(x &#x3D;&gt;
+        x.types.find(y &#x3D;&gt; y &#x3D;&#x3D;&#x3D; &#x27;locality&#x27;),
+      ).long_name;
+      const country &#x3D; result.address_components.find(x &#x3D;&gt;
+        x.types.find(y &#x3D;&gt; y &#x3D;&#x3D;&#x3D; &#x27;country&#x27;),
+      ).short_name;
+      return &#x60;${city}, ${country}&#x60;;
+    } else {
+      return result.formatted_address;
+    }
+  };
+
+  get model() {
+    return this._model;
+  }
+
+  set model(value) {
+    this._model &#x3D; value;
+    if (this._model.formatted_address) {
+      this.settingsProxy &#x3D; {
+        location: this._model.geometry.location,
+        formattedAddress: this._model.formatted_address,
+        name: this.formatter(this._model),
+        placeId: this._model.place_id,
+      };
+    }
+  }
+
+  get lastSync() {
+    if (this.settings &amp;&amp; !this.settings.settingsSkip) {
+      return (
+        this.timeAgoPipe.transform(this.weatherService.lastSync) || &#x27;Not synced&#x27;
+      );
+    } else {
+      return &#x27;Never&#x27;;
+    }
+  }
+
+  sync() {
+    this.weatherService.doSync();
+  }
+
+  updateSettings(event) {
+    if (event.value &amp;&amp; event.value.place_id) {
+      this.model &#x3D; event.value;
+    }
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;sw-widget&gt;
+  &lt;sw-widget-header [title]&#x3D;&quot;sticosWidgetOptions.headerName&quot;&gt;
+    &lt;div dropdown&gt;
+      &lt;li role&#x3D;&quot;menuitem&quot;&gt;
+        &lt;a class&#x3D;&quot;dropdown-item&quot; (click)&#x3D;&quot;onDeleteWidget()&quot;&gt;
+          &lt;i class&#x3D;&quot;fal fa-trash-alt&quot;&gt;&lt;/i&gt; Remove
+        &lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li role&#x3D;&quot;menuitem&quot;&gt;
+        &lt;a class&#x3D;&quot;dropdown-item&quot; (click)&#x3D;&quot;onShowSettings()&quot;&gt;
+          &lt;i class&#x3D;&quot;fal fa-cog&quot;&gt;&lt;/i&gt; Settings
+        &lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li role&#x3D;&quot;menuitem&quot;&gt;
+        &lt;a class&#x3D;&quot;dropdown-item&quot; (click)&#x3D;&quot;sync()&quot; [class.disabled]&#x3D;&quot;!settings&quot;&gt;
+          &lt;i class&#x3D;&quot;fal fa-sync&quot;&gt;&lt;/i&gt; Sync
+        &lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/div&gt;
+  &lt;/sw-widget-header&gt;
+  &lt;sw-widget-body&gt;
+    &lt;div *ngIf&#x3D;&quot;settings &amp;&amp; !settings.settingsSkip; else noSettings&quot; class&#x3D;&quot;h-100&quot;&gt;
+      &lt;div [ngSwitch]&#x3D;&quot;mod&quot; class&#x3D;&quot;h-100&quot;&gt;
+        &lt;sw-weather-widget-default [settings]&#x3D;&quot;settings&quot; *ngSwitchCase&#x3D;&quot;&#x27;default&#x27;&quot;&gt;
+          &lt;ng-content *ngTemplateOutlet&#x3D;&quot;loadingTemplate&quot;&gt;&lt;/ng-content&gt;
+        &lt;/sw-weather-widget-default&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;ng-template #noSettings&gt;
+      &lt;div class&#x3D;&quot;d-flex flex-column h-100 justify-content-center align-items-center&quot;&gt;
+        &lt;h5 class&#x3D;&quot;text-center&quot;&gt;Please set your settings.&lt;/h5&gt;
+      &lt;/div&gt;
+    &lt;/ng-template&gt;
+  &lt;/sw-widget-body&gt;
+  &lt;sw-widget-footer&gt;
+    &lt;div class&#x3D;&quot;text-right&quot;&gt;
+      &lt;small&gt;Last sync: {{lastSync}}&lt;/small&gt;
+    &lt;/div&gt;
+  &lt;/sw-widget-footer&gt;
+&lt;/sw-widget&gt;
+
+&lt;dx-popup title&#x3D;&quot;Weather settings&quot; maxWidth&#x3D;&quot;400px&quot; height&#x3D;&quot;auto&quot; [(visible)]&#x3D;&quot;popupVisible&quot; (onHidden)&#x3D;&quot;saveSettings()&quot;&gt;
+  &lt;div *dxTemplate&#x3D;&quot;let data of &#x27;content&#x27;&quot;&gt;
+    &lt;div class&#x3D;&quot;form-group&quot;&gt;
+      &lt;ng-template #rt let-r&#x3D;&quot;result&quot; let-t&#x3D;&quot;term&quot;&gt;
+        &lt;span&gt;{{ r.formatted_address}}&lt;/span&gt;
+      &lt;/ng-template&gt;
+      &lt;!-- &lt;label for&#x3D;&quot;typeahead-basic&quot;&gt;Search for a city:&lt;/label&gt;
+      &lt;input id&#x3D;&quot;typeahead-basic&quot; type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;model&quot; [ngbTypeahead]&#x3D;&quot;search&quot; [resultTemplate]&#x3D;&quot;rt&quot;
+        [resultFormatter]&#x3D;&quot;formatter&quot; [inputFormatter]&#x3D;&quot;formatter&quot; placeholder&#x3D;&quot;Type your city&quot; /&gt; --&gt;
+      &lt;div class&#x3D;&quot;dx-field sticos-dx-vertical&quot;&gt;
+        &lt;div class&#x3D;&quot;dx-field-label&quot;&gt;Search for a city:&lt;/div&gt;
+        &lt;div class&#x3D;&quot;dx-field-value&quot;&gt;
+          &lt;dx-autocomplete placeholder&#x3D;&quot;Type your city...&quot; [dataSource]&#x3D;&quot;dataSource&quot; [searchTimeout]&#x3D;&quot;500&quot; (onValueChanged)&#x3D;&quot;updateSettings($event)&quot;
+            [value]&#x3D;&quot;formattedAddress&quot;&gt;
+            &lt;div *dxTemplate&#x3D;&quot;let item of &#x27;item&#x27;&quot;&gt;
+              &lt;span&gt;{{formatter(item)}}&lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/dx-autocomplete&gt;
+          &lt;div *ngIf&#x3D;&quot;warning&quot;&gt;
+            {{warning}}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;hr&gt;
+    &lt;div class&#x3D;&quot;form-group&quot;&gt;
+      &lt;label&gt;Currently selected:&lt;/label&gt;
+      &lt;br/&gt;
+      &lt;h5 *ngIf&#x3D;&quot;settingsProxy &amp;&amp; settingsProxy.name&quot;&gt;{{settingsProxy.name}}&lt;/h5&gt;
+      &lt;h5 *ngIf&#x3D;&quot;!(settingsProxy &amp;&amp; settingsProxy.name)&quot;&gt;No city selected. Please choose a city.&lt;/h5&gt;
+    &lt;/div&gt;
+    &lt;hr&gt;
+    &lt;div class&#x3D;&quot;btn-toolbar&quot;&gt;
+      &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-primary&quot; (click)&#x3D;&quot;popupVisible &#x3D; false&quot; [disabled]&#x3D;&quot;!(settingsProxy &amp;&amp; settingsProxy.name)&quot;&gt;Save&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/dx-popup&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./weather-widget.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.sticos-dx-vertical {
+  .dx-field-label,
+  .dx-field-value {
+    display: block;
+    width: 100%;
+    float: none;
+  }
+}
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><sw-widget>  <sw-widget-header [title]="sticosWidgetOptions.headerName">    <div dropdown>      <li role="menuitem">        <a class="dropdown-item" (click)="onDeleteWidget()">          <i class="fal fa-trash-alt"></i> Remove        </a>      </li>      <li role="menuitem">        <a class="dropdown-item" (click)="onShowSettings()">          <i class="fal fa-cog"></i> Settings        </a>      </li>      <li role="menuitem">        <a class="dropdown-item" (click)="sync()" [class.disabled]="!settings">          <i class="fal fa-sync"></i> Sync        </a>      </li>    </div>  </sw-widget-header>  <sw-widget-body>    <div *ngIf="settings && !settings.settingsSkip; else noSettings" class="h-100">      <div [ngSwitch]="mod" class="h-100">        <sw-weather-widget-default [settings]="settings" *ngSwitchCase="\'default\'">          <ng-content *ngTemplateOutlet="loadingTemplate"></ng-content>        </sw-weather-widget-default>      </div>    </div>    <ng-template #noSettings>      <div class="d-flex flex-column h-100 justify-content-center align-items-center">        <h5 class="text-center">Please set your settings.</h5>      </div>    </ng-template>  </sw-widget-body>  <sw-widget-footer>    <div class="text-right">      <small>Last sync: {{lastSync}}</small>    </div>  </sw-widget-footer></sw-widget><dx-popup title="Weather settings" maxWidth="400px" height="auto" [(visible)]="popupVisible" (onHidden)="saveSettings()">  <div *dxTemplate="let data of \'content\'">    <div class="form-group">      <ng-template #rt let-r="result" let-t="term">        <span>{{ r.formatted_address}}</span>      </ng-template>      <!-- <label for="typeahead-basic">Search for a city:</label>      <input id="typeahead-basic" type="text" class="form-control" [(ngModel)]="model" [ngbTypeahead]="search" [resultTemplate]="rt"        [resultFormatter]="formatter" [inputFormatter]="formatter" placeholder="Type your city" /> -->      <div class="dx-field sticos-dx-vertical">        <div class="dx-field-label">Search for a city:</div>        <div class="dx-field-value">          <dx-autocomplete placeholder="Type your city..." [dataSource]="dataSource" [searchTimeout]="500" (onValueChanged)="updateSettings($event)"            [value]="formattedAddress">            <div *dxTemplate="let item of \'item\'">              <span>{{formatter(item)}}</span>            </div>          </dx-autocomplete>          <div *ngIf="warning">            {{warning}}          </div>        </div>      </div>    </div>    <hr>    <div class="form-group">      <label>Currently selected:</label>      <br/>      <h5 *ngIf="settingsProxy && settingsProxy.name">{{settingsProxy.name}}</h5>      <h5 *ngIf="!(settingsProxy && settingsProxy.name)">No city selected. Please choose a city.</h5>    </div>    <hr>    <div class="btn-toolbar">      <button type="submit" class="btn btn-primary" (click)="popupVisible = false" [disabled]="!(settingsProxy && settingsProxy.name)">Save</button>    </div>  </div></dx-popup></div>'
+    var COMPONENTS = [{'name': 'AnomalyWidgetComponent', 'selector': 'sw-anomaly-widget'},{'name': 'AnomalyWidgetDefaultComponent', 'selector': 'sw-anomaly-widget-default'},{'name': 'ComicWidgetComponent', 'selector': 'sw-comic-widget'},{'name': 'ComicWidgetDefaultComponent', 'selector': 'sw-comic-widget-default'},{'name': 'DashboardComponent', 'selector': 'sw-dashboard'},{'name': 'DashboardMenuComponent', 'selector': 'sw-dashboard-menu'},{'name': 'EmployeeWidgetComponent', 'selector': 'sw-employee-widget'},{'name': 'EmployeeWidgetDefaultComponent', 'selector': 'sw-employee-widget-default'},{'name': 'NewsWidgetComponent', 'selector': 'sw-news-widget'},{'name': 'NewsWidgetDefaultComponent', 'selector': 'sw-news-widget-default'},{'name': 'PresenceWidgetComponent', 'selector': 'sw-presence-widget'},{'name': 'PresenceWidgetDefaultComponent', 'selector': 'sw-presence-widget-default'},{'name': 'RssReaderComponent', 'selector': 'sw-rss-reader-widget'},{'name': 'RssReaderWidgetDefaultComponent', 'selector': 'sw-rss-reader-widget-default'},{'name': 'UserWidgetComponent', 'selector': 'sw-user-widget'},{'name': 'UserWidgetDefaultComponent', 'selector': 'sw-user-widget-default'},{'name': 'VacationBankWidgetComponent', 'selector': 'sw-vacation-bank-widget'},{'name': 'VacationBankWidgetDefaultComponent', 'selector': 'sw-vacation-bank-widget-default'},{'name': 'WeatherWidgetComponent', 'selector': 'sw-weather-widget'},{'name': 'WeatherWidgetDefaultComponent', 'selector': 'sw-weather-widget-default'},{'name': 'WidgetBodyComponent', 'selector': 'sw-widget-body'},{'name': 'WidgetComponent', 'selector': 'sw-widget'},{'name': 'WidgetFooterComponent', 'selector': 'sw-widget-footer'},{'name': 'WidgetHeaderComponent', 'selector': 'sw-widget-header'}];
+    var DIRECTIVES = [{'name': 'VacationBankDirective', 'selector': '[swVacationBank]'},{'name': 'WidgetDirective', 'selector': '[swWidget]'}];
+    var ACTUAL_COMPONENT = {'name': 'WeatherWidgetComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'WeatherWidgetComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,27 @@
+::ng-deep #chart {
+    height: 440px;
+}
+
+::ng-deep .dxc-arg-axis {
+    display: none;
+}
+
+::ng-deep .dxc-tooltip {
+    z-index: 2000;
+}
+
+.chart-amount {
+   font-size: 50px;
+   font-weight: 600;
+   line-height: 1.5;
+   color: #003b5c ; 
+   text-align: center;
+}
+
+.chart-absence {
+   font-size: 20px;
+   font-weight: 600;
+   line-height: 1.5;
+   color: #707070; 
+   text-align: center;
+}

@@ -1,0 +1,18 @@
+<div *ngIf="!loadingData; else loading" class="content-height d-flex justify-content-center" #gaugeContainer>
+  <div class="gauge-container" swVacationBank [gauge]="gauge">
+    <dx-bar-gauge id="gauge" #gauge [endValue]="totalDays" [values]="currentValue" [palette]="['rgb(0, 59, 92)']" [relativeInnerRadius]="0.8">
+      <dxo-geometry [startAngle]="180" [endAngle]="0">
+      </dxo-geometry>
+      <dxo-label [connectorWidth]="0" [indent]="0" [visible]="false"></dxo-label>
+    </dx-bar-gauge>
+  </div>
+  <div class="total-days-container default-color">
+    <div class="info-days-count">{{currentValue}}</div>
+    <p>Feriedager igjen</p>
+  </div>
+</div>
+<ng-template #loading>
+  <div class="content-height">
+    <ng-content></ng-content>
+  </div>
+</ng-template>

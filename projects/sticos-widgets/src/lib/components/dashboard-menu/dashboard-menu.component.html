@@ -1,0 +1,22 @@
+<div class="chooser bg-white box-shadow">
+  <button (click)="toLeft()" class="bg-white border-0" [disabled]="!(showLeftButton | async)">
+    <i class="fal fa-angle-left" [class.visible]="showLeftButton | async"></i>
+  </button>
+  <div class="sc-wrapper bg-white" #wrapper>
+    <nav class="nav flex-scroll" #scrollWrapper>
+      <a ngxGridsterItemPrototype *ngFor="let component of components" [config]="{helper: true}" [w]="component.sticosWidgetOptions.options.defaultWidth"
+        [h]="component.sticosWidgetOptions.options.defaultHeight" (drop)="onDrop($event, component)" (enter)="enter.emit($event)"
+        (out)="out.emit($event)" class="gridster-prototype nav-link">
+        <div class="gridster-placeholder">
+          {{component.sticosWidgetOptions.headerName}}
+        </div>
+      </a>
+    </nav>
+  </div>
+  <button (click)="toRight()" class="bg-white border-0" [disabled]="!(showRightButton | async)">
+    <i class="fal fa-angle-right" [class.visible]="showRightButton | async"></i>
+  </button>
+</div>
+<div class="warning mb-4">
+  <small>Please drag and drop widget you want to see on dashboard.</small>
+</div>

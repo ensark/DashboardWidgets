@@ -1,0 +1,31 @@
+<div class="content-height" [ngClass]="{'ps__child--consume': shouldScroll}" (mouseenter)="shouldScroll = true" (mouseleave)="shouldScroll = false">
+  <div class="anomaly-content">
+    <dx-data-grid id="grid-container" [dataSource]="dataSource" [showRowLines]="true" [showColumnLines]="false" [showBorders]="false"
+      [remoteOperations]="true" [columnAutoWidth]="true" [wordWrapEnabled]="true">
+
+      <dxo-scrolling
+        mode="infinite"
+        showScrollbar="always">
+      </dxo-scrolling>
+
+
+      <dxi-column dataField="date" caption="Date" dataType="date"></dxi-column>
+      <dxi-column dataField="location" caption="Place"></dxi-column>
+      <dxi-column dataField="description" id="description" caption="Description"></dxi-column>
+      <dxi-column dataField="responsible" caption="Responsible" cellTemplate="userCellTemplate"></dxi-column>
+      <dxi-column dataField="deadline" dataType="date" caption="Deadline"></dxi-column>
+      <dxi-column dataField="status" caption="Status" cellTemplate="cellTemplate"></dxi-column>
+
+      <div *dxTemplate="let data of 'cellTemplate'">
+        <div [class.grid-status]="data.value === 'OnGoing'">
+          {{ data.value }}
+        </div>
+      </div>
+      <div *dxTemplate="let data of 'userCellTemplate'">
+        <div>
+          <a class="responsible-user"> {{ data.value }}</a>
+        </div>
+      </div>
+    </dx-data-grid>
+  </div>
+</div>
